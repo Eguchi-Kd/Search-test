@@ -25,6 +25,7 @@ jobs:
       run: |
         echo "API_KEY=${{ secrets.API_KEY }}" >> $GITHUB_ENV
         echo "CLIENT_ID=${{ secrets.CLIENT_ID }}" >> $GITHUB_ENV
+        echo "CLIENT_ID=${{ secrets.CLIENT_ID }}" >> $GITHUB_ENV
 
     - name: Build project
       run: npm run build
