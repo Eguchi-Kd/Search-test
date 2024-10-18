@@ -1,6 +1,6 @@
 # secret_fileファイルは公開しない（gitignore）ファイルだから、ファイルがなくてロードされなければパスする
 try:
-    from .local_secret_settings import API_KEY, API_SECRET, ACCESS_KEY, ACCESS_SECRET
+    from .secret_file.py import API_KEY, API_SECRET, ACCESS_KEY, ACCESS_SECRET
 except ImportError:
     pass
 
