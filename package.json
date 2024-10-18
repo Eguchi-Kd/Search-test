@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "build": "webpack"
+    "build": "npm run build"
   },
   "dependencies": {
     "dotenv": "^16.0.0"
