@@ -4,7 +4,8 @@
   "description": "Search-test",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "webpack"
   },
   "dependencies": {
     "dotenv": "^16.0.0"
