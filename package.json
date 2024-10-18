@@ -1,0 +1,13 @@
+{
+  "name": "Search-test",
+  "version": "1.0.0",
+  "description": "Search-test",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "your-build-command-here"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0"  // dotenvパッケージの追加
+  }
+}
