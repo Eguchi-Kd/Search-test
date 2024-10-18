@@ -1,44 +1,25 @@
-# deploy.yml
+name: Node.js CI
 
-name: Deploy
-
-# ワークフローのトリガーを設定（mainブランチにプッシュされたとき）
 on:
   push:
     branches:
       - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      # コードをチェックアウト
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      # Node.jsをセットアップ（もし使用している場合）
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
 
-      # 環境変数を作成
-      - name: Create .env file
-        run: |
-          echo "API_KEY=${{ secrets.API_KEY }}" > .env
-          echo "CLIENT_ID=${{ secrets.CLIENT_ID }}" >> .env
-          echo "CLIENT_ID=${{ secrets.SPREADSHEET_ID }}" >> .env
+    - name: Install dependencies
+      run: npm install
 
-      # 依存関係のインストールとビルド（Node.jsを使用する場合）
-      - name: Install dependencies
-        run: |
-          npm install
-          npm run build
-
-      # ビルド成果物をデプロイ
-      - name: Deploy
-        run: |
-          # デプロイの処理を記述
-          # 例えばGitHub Pagesへのデプロイなど
-          npm run deploy
+    - name: Build project
+      run: npm run build
