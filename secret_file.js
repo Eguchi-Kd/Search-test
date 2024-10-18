@@ -1,0 +1,5 @@
+module.exports = {
+  API_KEY = ""
+  CLIENT_ID = ""
+  SPREADSHEET_ID = "1tpeIxScr6piwlKVAvCt5WbUz-1r-m94yHIUmXK6yvrM"
+};
