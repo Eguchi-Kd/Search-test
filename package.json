@@ -8,6 +8,6 @@
     "build": "your-build-command-here"
   },
   "dependencies": {
-    "dotenv": "^16.0.0"  // dotenvパッケージの追加
+    "dotenv": "^16.0.0"
   }
 }
