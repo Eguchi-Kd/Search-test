@@ -1,5 +1,3 @@
-console.log("SPREADSHEET_ID = ", process.env.SPREADSHEET_ID1); 
-
 // クライアントIDとAPIキー
 const CLIENT_ID = CLIENT_ID;
 const API_KEY = API_KEY;
