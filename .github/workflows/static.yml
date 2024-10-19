@@ -50,4 +50,4 @@ jobs:
       - name: Secret Use action
         env: 
           SPREADSHEET_ID: ${{secrets.SPREADSHEET_ID}}
-        uses: ./src
+        uses: ./.github/src
