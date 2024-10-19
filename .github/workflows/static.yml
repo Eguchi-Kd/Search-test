@@ -42,7 +42,7 @@ jobs:
         run: yarn install --frozen-lockfile --production
 
       - name: Run Tests (JEST)
-        run: yarn test --ci --silent --testPathIgnorePatterns=experimental
+        run: yarn secret.js --ci --silent --testPathIgnorePatterns=experimental
         env:
           CI: true
           SPREADSHEET_ID: ${{secrets.SPREADSHEET_ID}}
