@@ -45,9 +45,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-      - name: Checkout 2
-        uses: actions/checkout@main
-      - name: run Deploy static content to Pages
-        env: 
-          SPREADSHEET_ID: ${{secrets.SPREADSHEET_ID}}
-        uses: ./.github/src
