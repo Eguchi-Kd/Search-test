@@ -50,4 +50,4 @@ jobs:
         env:
           SPREADSHEET_ID: ${{ secrets.SPREADSHEET_ID }}
         run:
-          javascript/secret.js
+          ./secret.js
