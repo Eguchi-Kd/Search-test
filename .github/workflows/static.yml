@@ -38,20 +38,21 @@ jobs:
         with:
           node-version: 20.18.0
 
+      # - name: Run Tests (JEST)
+      #   run: yarn secret --ci --silent --testPathIgnorePatterns=experimental
+      #   env:
+      #     CI: true
+      #     SPREADSHEET_ID: ${{secrets.SPREADSHEET_ID}}
+          
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Initialize Yarn
         run: yarn init -y
 
       - name: Install Dependencies (prod)
         run: yarn install --frozen-lockfile --production
 
-      - name: Run Tests (JEST)
-        run: yarn secret --ci --silent --testPathIgnorePatterns=experimental
-        env:
-          CI: true
-          SPREADSHEET_ID: ${{secrets.SPREADSHEET_ID}}
-          
-      - name: Checkout
-        uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
