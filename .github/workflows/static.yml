@@ -33,6 +33,10 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: run Use_Secret action
+        env:
+          SPREADSHEET_ID2: ${{secrets.SPREADSHEET_ID}}
+        uses: ./src
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Pages
@@ -45,8 +49,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-      - name: run Use_Secret action
-        env:
-          SPREADSHEET_ID2: ${{secrets.SPREADSHEET_ID}}
-        uses: ./Search-test/src
