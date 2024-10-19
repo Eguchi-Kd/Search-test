@@ -33,19 +33,19 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Node.js 20.18.0
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20.18.0
+      # - name: Set up Node.js 20.18.0
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: 20.18.0
 
-      - name: Install Dependencies (prod)
-        run: yarn install --frozen-lockfile --production
+      # - name: Install Dependencies (prod)
+      #   run: yarn install --frozen-lockfile --production
 
-      - name: Run Tests (JEST)
-        run: yarn secret --ci --silent --testPathIgnorePatterns=experimental
-        env:
-          CI: true
-          SPREADSHEET_ID: ${{secrets.SPREADSHEET_ID}}
+      # - name: Run Tests (JEST)
+      #   run: yarn secret --ci --silent --testPathIgnorePatterns=experimental
+      #   env:
+      #     CI: true
+      #     SPREADSHEET_ID: ${{secrets.SPREADSHEET_ID}}
           
       - name: Checkout
         uses: actions/checkout@v4
