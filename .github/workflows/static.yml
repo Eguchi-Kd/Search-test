@@ -33,9 +33,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: run Use_Secret action
-        env:
-          SPREADSHEET_ID2: ${{secrets.SPREADSHEET_ID}}
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Pages
