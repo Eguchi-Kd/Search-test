@@ -46,7 +46,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-      - name: Use Secret
+      - name: run Use_Secret action
         env:
           SPREADSHEET_ID: ${{secrets.SPREADSHEET_ID}}
         uses: ./src
