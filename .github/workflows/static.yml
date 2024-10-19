@@ -37,12 +37,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20.18.0
-
-      # - name: Run Tests (JEST)
-      #   run: yarn secret --ci --silent --testPathIgnorePatterns=experimental
-      #   env:
-      #     CI: true
-      #     SPREADSHEET_ID: ${{secrets.SPREADSHEET_ID}}
           
       - name: Checkout
         uses: actions/checkout@v4
@@ -63,6 +57,13 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Run Tests (JEST)
+        run: yarn secret.js --ci --silent --testPathIgnorePatterns=experimental
+        env:
+          CI: true
+          SPREADSHEET_ID: ${{secrets.SPREADSHEET_ID}}
+      
 
       # - name: Run secret
       #   env:
