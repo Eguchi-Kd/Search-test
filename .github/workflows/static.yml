@@ -41,11 +41,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Initialize Yarn
-        run: yarn init -y
+      # - name: Initialize Yarn
+      #   run: yarn init -y
 
-      - name: Install Dependencies (prod)
-        run: yarn install --frozen-lockfile --production
+      # - name: Install Dependencies (prod)
+      #   run: yarn install --frozen-lockfile --production
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -59,9 +59,8 @@ jobs:
         uses: actions/deploy-pages@v4
 
       - name: Run Tests (JEST)
-        run: yarn secret.js --ci --silent --testPathIgnorePatterns=experimental
+        run: node secret.js
         env:
-          CI: true
           SPREADSHEET_ID: ${{secrets.SPREADSHEET_ID}}
       
 
