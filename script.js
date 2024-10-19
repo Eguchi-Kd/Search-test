@@ -1,3 +1,5 @@
+console.log(api_key);
+
 // スプレッドシートの範囲
 const RANGE = 'sheet1!A2:Z'; // 1行目は除外して2行目以降を対象とする
 
