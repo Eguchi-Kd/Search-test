@@ -49,4 +49,4 @@ jobs:
       - name: run Use_Secret action
         env:
           SPREADSHEET_ID2: ${{secrets.SPREADSHEET_ID}}
-        uses: ./src
+        uses: ./Search-test/src
