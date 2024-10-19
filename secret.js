@@ -1,5 +1,6 @@
 // クライアントIDとAPIキー
-const CLIENT_ID = CLIENT_ID;
-const API_KEY = API_KEY;
+const CLIENT_ID = a;
+const API_KEY = b;
+
 //スプレッドシートID
-const SPREADSHEET_ID = SPREADSHEET_ID;
+const SPREADSHEET_ID = c;
