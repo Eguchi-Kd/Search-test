@@ -9,6 +9,10 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+#シークレット使用
+env:
+  SPREADSHEET_ID: ${{secrets.SPREADSHEET_ID}}
+
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -41,5 +45,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-      - name: Print name
-        run: echo "My SPREADSHEET_ID is ${{secrets.SPREADSHEET_ID}}"
