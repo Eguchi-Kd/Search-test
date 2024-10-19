@@ -49,5 +49,4 @@ jobs:
       - name: Run secret
         env:
           SPREADSHEET_ID: ${{ secrets.SPREADSHEET_ID }}
-        run:
-          ./secret.js
+        run: npm run build
