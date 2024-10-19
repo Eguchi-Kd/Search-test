@@ -1,0 +1,13 @@
+name: secret
+on: push
+jobs:
+  secret:
+    runs-on: ubuntu-latest
+    name: secret
+    steps:
+      - name: Checkout
+        uses: .github/checkout@main
+      - name: run secret action
+        env:
+          SPREADSHEET_ID: ${{secrets.SPREADSHEET_ID}}
+        uses: ./.github/src
