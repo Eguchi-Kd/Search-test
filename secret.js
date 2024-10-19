@@ -1,1 +1,1 @@
-console.log("SPREADSHEET_ID = ", process.env.SPREADSHEET_ID1); 
+console.log("SPREADSHEET_ID = ", process.env.SPREADSHEET_ID); 
