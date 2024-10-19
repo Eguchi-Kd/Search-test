@@ -1,9 +1,4 @@
-// クライアントIDとAPIキー
-const CLIENT_ID = CLIENT_ID;
-const API_KEY = API_KEY;
-
-// スプレッドシートIDと範囲
-const SPREADSHEET_ID = SPREADSHEET_ID;
+// スプレッドシートの範囲
 const RANGE = 'sheet1!A2:Z'; // 1行目は除外して2行目以降を対象とする
 
 // 認証とAPIの読み込み
