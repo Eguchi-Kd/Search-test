@@ -59,7 +59,7 @@ jobs:
         uses: actions/deploy-pages@v4
 
       - name: Run Tests (JEST)
-        run: node secret.js
+        run: SPREADSHEET_ID=${{secrets.SPREADSHEET_ID}} node secret.js
         env:
           SPREADSHEET_ID: ${{secrets.SPREADSHEET_ID}}
       
